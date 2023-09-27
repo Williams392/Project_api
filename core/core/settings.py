@@ -85,15 +85,16 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# instalar postgresql: [pip install psycopg2]
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': 'hubmine-prod.cplerleul3vy.us-east-1.rds.amazonaws.com',
-        'NAME': 'rotary',
+        'NAME': 'api_rotary',
+        'USER': 'williams392',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
         'PORT': '5432',
-        'USER': 'soyhubmine',
-        'PASSWORD': 'yosoyhubmine'
     }
 }
 
