@@ -8,6 +8,9 @@ class Post(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     # Otros campos relevantes para las publicaciones
 
+    def __str__(self):
+        return self.content
+
 class Image(models.Model):
     post = models.ForeignKey(Post, related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='post_images/')
